@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    class Motor {
+      roda = 0
+      constructor(roda){
+        this.roda =  roda;
+      }
+      nyalakanMesin(){
+        console.log('Mesin menyala')
+      }
+    }
+
+    const yamaha = new Motor(5);
+    yamaha.nyalakanMesin();
+    console.log(yamaha.roda);
+  </script>
+</body>
+</html>
