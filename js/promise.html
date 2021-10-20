@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // const buatMie = () => {
+    //   return new Promise((resolve, reject) => {
+    //     const statusMie = false;
+    //     if (statusMie) {
+    //     resolve('Mie berhasil dibuat');
+    //     } else {
+    //     reject('Mie gagal dibuat');
+    //     }
+    //   });
+    // };
+    // const mie = buatMie();
+    // // console.log(mie);
+    // mie
+    //   .then((status) => {
+    //     console.log(status);
+    //   })
+    //   .catch((gagal) => {
+    //     console.log(gagal);
+    //   });
+
+//     function buatKopi() {
+// ambilkanGelas()
+// .then(bukaBungkus)
+// .then(tuangkanAirPanas)
+// .then(adukKopi)
+// .then(console.log)
+// .catch(console.log);
+// }
+function ambilkanGelas() {
+return new Promise((resolve, reject) => {
+gelas = true;
+setTimeout(() => {
+if (gelas) {
+resolve('Gelas telah diambil..');
+} else {
+reject('Gelas tidak ada...');
+}
+}, 1500);
+});
+}
+function bukaBungkus() {
+return new Promise((resolve, reject) => {
+setTimeout(() => {
+resolve('Bungkus kopi telah dibuka..');
+}, 1500);
+});
+}
+function tuangkanAirPanas() {
+return new Promise((resolve, reject) => {
+setTimeout(() => {
+resolve('Air panas telah dituang..');
+}, 1500);
+});
+}
+function adukKopi() {
+return new Promise((resolve, reject) => {
+setTimeout(() => {
+resolve('Kopi telah diaduk..');
+}, 1500);
+});
+}
+
+
+async function buatKopi() {
+try {
+await ambilkanGelas();
+await bukaBungkus();
+await tuangkanAirPanas();
+const hasil = await adukKopi();
+console.log(hasil);
+} catch (gagal) {
+console.log(gagal);
+}
+}
+buatKopi();
+    
+  </script>
+</body>
+</html>

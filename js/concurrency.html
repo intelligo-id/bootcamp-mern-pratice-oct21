@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // const process = () => {
+    //   console.log('Ini proses kedua');
+    // }
+
+    // console.log('Ini proses pertama');
+    // setTimeout(process, 3000);
+    // console.log('Ini proses ketiga');
+
+
+    const antriVaksin = (callback) => {
+      let status = null;
+      console.log("Sedang melakukan vaksinasi");
+      setTimeout(() => {
+        status = "Sudah vaksin";
+        callback(status)
+      }, 3000);
+      return status
+    }
+    
+    antriVaksin((status) => {
+      console.log(status)
+    })
+    
+  </script>
+</body>
+</html>
